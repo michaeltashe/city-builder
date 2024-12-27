@@ -3,9 +3,11 @@ extends CharacterBody2D
 @export var speed = 160
 @export var zoom_amount = 0.25
 
+
+
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-
+	var tilemap = get_node("tilemap")
 	if (Input.is_action_pressed("sprint")):
 		velocity = input_direction * speed * 3
 	else:
