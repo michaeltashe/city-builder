@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://w65h1kefdyom"]
+
+[ext_resource type="Script" path="res://Scenes/Player/CharacterBody2D.gd" id="1_vauhs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8nkak"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vauhs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8nkak")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(5, 11)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
