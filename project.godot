@@ -12,10 +12,22 @@ config_version=5
 
 config/name="CityBuilder"
 config/version="0.0.1"
-run/main_scene="res://tile_map.tscn"
+run/main_scene="res://Scenes/World/tile_map.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+<<<<<<< Updated upstream
+=======
+[display]
+
+mouse_cursor/custom_image="res://Sprites/UI/cursor.png"
+
+[filesystem]
+
+import/fbx/enabled.android=true
+import/fbx/enabled.web=true
+
+>>>>>>> Stashed changes
 [input]
 
 left={
