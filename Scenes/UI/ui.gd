@@ -18,7 +18,7 @@ func _ready():
 		if buildables.find(building_name) != -1:
 			var filename = building_name.replace(" ", "-").to_lower()
 			var button = TextureButton.new()
-			button.set_texture_normal(load("res://Sprites/" +  filename + ".png"))
+			button.set_texture_normal(load("res://Sprites/Infrastructure/" +  filename + ".png"))
 			button.button_down.connect(self._on_button_down.bind())
 			button.button_up.connect(self._on_button_up.bind(building_name))
 			button.mouse_filter = Control.MOUSE_FILTER_STOP
