@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://4p1f3crh23an"]
+
+[ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_khtnk"]
+
+[sub_resource type="SystemFont" id="SystemFont_6uicn"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_khtnk")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.615
+anchor_bottom = 0.154
+offset_right = -24.6
+offset_bottom = -6.16
+scale = Vector2(0.9, 0.9)
+mouse_filter = 0
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 28.8
+anchor_right = 28.8
+offset_left = -96.0
+offset_right = -4.57764e-05
+offset_bottom = 44.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("SystemFont_6uicn")
+theme_override_font_sizes/font_size = 31
