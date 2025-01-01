@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyp3ofk7kpr7v"]
+
+[ext_resource type="Script" path="res://Scenes/3D Overhaul/World/procedural_generator.gd" id="1_xdnpy"]
+[ext_resource type="PackedScene" uid="uid://b32f6daayuyrp" path="res://Scenes/3D Overhaul/Player/player.tscn" id="2_qbbhg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mx525"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j57cw"]
+transparency = 1
+albedo_color = Color(0.168627, 0.435294, 1, 0.388235)
+
+[node name="Main" type="Node3D"]
+
+[node name="World" type="Node" parent="."]
+script = ExtResource("1_xdnpy")
+
+[node name="Water" type="CSGMesh3D" parent="World"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mx525")
+material = SubResource("StandardMaterial3D_j57cw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 0.816138, 0.577858, 0, -0.577858, 0.816138, 20, 20, 20)
+
+[node name="Player" parent="." instance=ExtResource("2_qbbhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)

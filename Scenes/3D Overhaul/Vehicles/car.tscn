@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://uot3s7sqltyd"]
+
+[ext_resource type="Script" path="res://Scenes/3D Overhaul/Vehicles/car.gd" id="1_lg8n8"]
+[ext_resource type="PackedScene" uid="uid://bh2ictvti4b2y" path="res://Art/Models/car.glb" id="2_6wpqg"]
+
+[node name="Car" type="Node3D"]
+script = ExtResource("1_lg8n8")
+
+[node name="car" parent="." instance=ExtResource("2_6wpqg")]

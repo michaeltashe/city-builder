@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b32f6daayuyrp"]
+
+[ext_resource type="Script" path="res://Scenes/3D Overhaul/Player/player.gd" id="1_sdpof"]
+[ext_resource type="PackedScene" uid="uid://uot3s7sqltyd" path="res://Scenes/3D Overhaul/Vehicles/car.tscn" id="2_byd8h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_310ue"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_sdpof")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.408607, 0.577096, 0, 0.816138, 0.577858, -0.707107, -0.408607, 0.577096, 20, 20, 20)
+projection = 1
+size = 10.0
+near = 0.001
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_310ue")
+
+[node name="Car" parent="." instance=ExtResource("2_byd8h")]
+transform = Transform3D(-0.0883884, 0, -0.0883883, 0, 0.125, 0, 0.0883883, 0, -0.0883884, 0, 0, 0)

@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/UI/ui.gd" id="1_khtnk"]
 
 [sub_resource type="SystemFont" id="SystemFont_6uicn"]
+subpixel_positioning = 0
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource("1_khtnk")
